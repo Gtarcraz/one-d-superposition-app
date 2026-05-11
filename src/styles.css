@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 24px;
+  background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 45%, #fdf2f8 100%);
+}
+
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card,
+.hero-card {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09);
+  backdrop-filter: blur(14px);
+}
+
+.hero-card {
+  padding: 28px;
+}
+
+.hero-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  background: #0f172a;
+  color: white;
+}
+
+h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.3rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.hero-card p,
+.chart-header p {
+  max-width: 780px;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #0f172a;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.blue-badge {
+  background: #2563eb;
+  color: white;
+}
+
+.pink-badge {
+  background: #db2777;
+  color: white;
+}
+
+.button {
+  border: 0;
+  border-radius: 16px;
+  padding: 11px 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.button.primary {
+  background: #0f172a;
+  color: white;
+}
+
+.button.secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.button.outline {
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.demo-buttons {
+  min-width: 190px;
+  display: grid;
+  gap: 10px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+}
+
+.controls-column,
+.visual-column,
+.explanation-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wave-card {
+  padding: 22px;
+}
+
+.wave-one {
+  background: rgba(239, 246, 255, 0.88);
+  border-color: rgba(147, 197, 253, 0.75);
+}
+
+.wave-two {
+  background: rgba(253, 242, 248, 0.88);
+  border-color: rgba(249, 168, 212, 0.75);
+}
+
+.card-title-row,
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card-title-row h2,
+.chart-header h2,
+.teacher-card h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: -0.03em;
+}
+
+.slider-row {
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 20px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.slider-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.slider-label {
+  font-weight: 800;
+}
+
+.slider-hint {
+  color: #64748b;
+  font-size: 0.82rem;
+  margin-top: 3px;
+}
+
+.slider {
+  width: 100%;
+  accent-color: #0f172a;
+}
+
+.chart-card {
+  padding: 22px;
+}
+
+.toggle-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toggle-buttons .button {
+  padding: 9px 12px;
+}
+
+.wave-chart-box {
+  width: 100%;
+  height: 410px;
+}
+
+.spectrum-chart-box {
+  width: 100%;
+  height: 320px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.explanation-card {
+  padding: 18px;
+}
+
+.explanation-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.explanation-title h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.explanation-text {
+  color: #475569;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.observation-card {
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+.observation-title {
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.observation-text {
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.stat-grid div {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-grid span {
+  display: block;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+}
+
+.stat-grid strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.35rem;
+}
+
+.teacher-card {
+  padding: 24px;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.teacher-grid div {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 16px;
+  line-height: 1.55;
+}
+
+.teacher-grid p {
+  color: #475569;
+}
+
+.tooltip-box {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.14);
+  font-size: 0.82rem;
+}
+
+.tooltip-title {
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+@media (max-width: 1100px) {
+  .hero-layout,
+  .main-grid,
+  .bottom-grid,
+  .teacher-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .demo-buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .hero-card,
+  .chart-card,
+  .teacher-card,
+  .wave-card {
+    padding: 16px;
+  }
+
+  .card-title-row,
+  .chart-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .demo-buttons,
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wave-chart-box {
+    height: 330px;
+  }
+}
