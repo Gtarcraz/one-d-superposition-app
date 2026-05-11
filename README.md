@@ -1,132 +1,104 @@
 # 1D Wave Superposition Teaching App
 
-A Vite + React classroom demo for teaching **superposition** to secondary school students.
+Interactive Vite + React app for teaching secondary school students about 1D wave superposition.
 
-Students can adjust two waves and immediately see:
+## Features
 
-- Wave 1
-- Wave 2
-- The total wave: `Wave 1 + Wave 2`
-- The frequency spectrum of the total wave
+- Two waves with adjustable frequency
+- Adjustable amplitude and phase offset
+- Individual wave display
+- Total wave display
+- FFT-style spectrum showing the frequency ingredients
+- Demo presets:
+  - Constructive interference
+  - Destructive interference
+  - Beat pattern
+- QR code image for classroom access
 
-## Live GitHub Pages URL
-
-After deployment, the app should be available at:
-
-```text
-https://Gtarcraz.github.io/one-d-superposition-app/
-```
-
-If you rename the GitHub repository, update the `base` value in `vite.config.js`.
-
-## Run locally
+## Local Run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the local URL shown by Vite, usually:
+Open the Vite URL shown in the terminal, usually:
 
 ```text
 http://localhost:5173
 ```
 
-## Deploy to GitHub Pages
+## GitHub Pages Deployment Using GitHub Actions
 
-### 1. Push this project to GitHub
+This project is ready for GitHub Actions deployment.
+
+### 1. Upload/push this project to your repo
+
+Expected repo:
+
+```text
+https://github.com/Gtarcraz/one-d-superposition-app
+```
+
+### 2. In GitHub, set Pages source to Actions
+
+Go to:
+
+```text
+Settings → Pages
+```
+
+Under **Build and deployment**, set:
+
+```text
+Source: GitHub Actions
+```
+
+### 3. Push to `main`
 
 ```bash
-git init
 git add .
-git commit -m "Initial commit: 1D wave superposition app"
-git branch -M main
-git remote add origin git@github.com:Gtarcraz/one-d-superposition-app.git
-git push -u origin main
+git commit -m "Add 1D superposition app with GitHub Actions deployment"
+git push
 ```
 
-If the remote already exists, use:
-
-```bash
-git remote set-url origin git@github.com:Gtarcraz/one-d-superposition-app.git
-git push -u origin main
-```
-
-### 2. Deploy
-
-```bash
-npm install
-npm run deploy
-```
-
-This will build the app and publish the `dist/` folder to the `gh-pages` branch.
-
-### 3. Enable GitHub Pages
-
-In the GitHub repository:
+GitHub will automatically run:
 
 ```text
-Settings → Pages → Source: Deploy from a branch → Branch: gh-pages → Folder: / root → Save
+Actions → Deploy Vite React App to GitHub Pages
 ```
 
-Your app should then be live at:
+### 4. Public URL
+
+After deployment, the app should be available at:
 
 ```text
-https://Gtarcraz.github.io/one-d-superposition-app/
+https://gtarcraz.github.io/one-d-superposition-app/
 ```
 
-## Common blank-page fix
+## QR Code
 
-If the page is blank after deployment, check `vite.config.js`:
+The QR code points to:
 
-```js
-base: "/one-d-superposition-app/",
+```text
+https://gtarcraz.github.io/one-d-superposition-app/
 ```
 
-The leading and trailing slashes are important.
-
-Then redeploy:
-
-```bash
-npm run deploy
-```
-
-## Features
-
-- Two adjustable waves
-- Frequency sliders
-- Amplitude sliders
-- Phase offset sliders
-- Individual wave display
-- Total superposed wave display
-- FFT-style frequency spectrum
-- Demo buttons for constructive interference, destructive interference, and beat patterns
-
-## Teaching idea
-
-Start by setting Wave 2 amplitude to zero. Then slowly increase Wave 2 amplitude so students see the second wave joining the first. After that, use the demo buttons to show constructive interference, destructive interference, and beats.
-
-
-## QR Code for Students
-
-This ZIP includes a QR code image after deployment:
+QR image files:
 
 ```text
 public/qr-code.png
+public/qr-code-plain.png
 ```
 
-It points to:
+Use `public/qr-code.png` in PowerPoint slides.
 
-```text
-https://gtarcraz.github.io/one-d-superposition-app/
+## Important Vite Setting
+
+`vite.config.js` includes:
+
+```js
+base: "/one-d-superposition-app/"
 ```
 
-You can place this QR code into your PowerPoint slide so students can open the app on their phones.
-
-After deployment, the QR code should open the live app at:
-
-```text
-https://gtarcraz.github.io/one-d-superposition-app/
-```
-
-If you change the repository name or GitHub username, regenerate the QR code with the new GitHub Pages URL.
+Keep this if your GitHub repo name is `one-d-superposition-app`.
